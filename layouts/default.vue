@@ -8,18 +8,14 @@
         <Nuxt />
       </div>
       <div class="w-full lg:w-1/5">
-        <h2 class="text-xl mb-2 font-semibold">Tags</h2>
-        <Tag name="Python" />
-        <Tag name="Javascript" />
-        <Tag name="NginX" />
-        <Tag name="Server" />
-        <Tag name="Vue" />
-        <Tag name="Django" />
+        <tags-list/>
       </div>
     </div>
     <Footer/>
   </div>
 </template>
+
+
 
 <style lang="postcss">
 * {

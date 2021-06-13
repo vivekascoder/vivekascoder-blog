@@ -27,6 +27,7 @@
         <span 
           class="link"
           v-for="link in links"
+          :key="link.id"
         >
           <a href="#!">{{link.name}}</a>
         </span>
@@ -51,6 +52,7 @@
       <div v-if="showMenu" class="sm:flex md:hidden flex-col absolute top-full left-0 right-0 bg-white shadow-md md:shadow-none lg:static lg:flex-row items-center links">
         <span 
           v-for="link in links"
+          :key="link.id"
           class="link text-center w-full md:w-auto"
         >
           <NuxtLink 
@@ -112,7 +114,7 @@ export default {
 
 <style lang="postcss" scoped>
 .links .link {
-  /* @apply px-4; */
+  @apply px-4;
   &:hover {
     @apply underline;
   }

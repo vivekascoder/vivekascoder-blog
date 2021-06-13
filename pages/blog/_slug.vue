@@ -2,6 +2,8 @@
   <div>
     <h1 class="text-4xl font-semibold">{{ article.title }}</h1>
     <p class="italic py-2 text-gray-400 text-xl mb-6">Posted on {{getPerfectDate(article.createdAt)}} </p>
+
+    <!-- Table of contents -->
     <nav class="table mb-14">
       <h2 class="text-2xl mb-5 font-semibold">📝 Table of contents</h2>
       <ul class="table__links">
@@ -12,14 +14,27 @@
         >
           <NuxtLink 
             :to="`#${link.id}`"
-            
           >
             {{ link.text }}
           </NuxtLink>
         </li>
       </ul>
     </nav>
+
+    <!-- Markdown content -->
     <nuxt-content :document="article" class="prose" />
+
+    <!-- Tags. For suggesting similar posts. -->
+    <h2 class="text-2xl mt-10">Related Topics</h2>
+    <div class="mb-10">
+      <Tag
+        v-for="tag in article.tags"
+        :key="tag"
+        :name="tag"
+      />
+    </div>
+
+    <!-- Next and Previous Buttons. -->
     <div class="prev-next flex items-center justify-between my-10">
       <div>
         <Btn 
@@ -63,16 +78,6 @@
 
 <script>
 export default {
-  // props: {
-  //   prev: {
-  //     type: Object,
-  //     default: () => null
-  //   },
-  //   next: {
-  //     type: Object,
-  //     default: () => null
-  //   }
-  // },
   async asyncData({$content, params}) {
     console.log('slug ', params)
     const article = await $content('articles', params.slug).fetch()
