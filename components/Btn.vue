@@ -4,10 +4,10 @@
     :to="{name: 'article', params: {slug: slug}}"
   >
     <span>
-      <slot :name="iconDirection == 'left' ? 'icon' : 'title'">
+      <slot :name="left ? 'icon' : 'title'">
       </slot>
     </span>
-    <slot :name="iconDirection == 'right' ? 'icon' : 'title'">
+    <slot :name="left ? 'title' : 'icon'">
     </slot>
   </NuxtLink>
 </template>
@@ -19,8 +19,8 @@ props: {
     type: String,
     required: true
   },
-  iconDirection: {
-    type: String,
+  left: {
+    type: Boolean,
     required: true
   }
 }

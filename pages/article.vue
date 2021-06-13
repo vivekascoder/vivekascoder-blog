@@ -1,12 +1,14 @@
 <template>
   <div>
-    <!-- <h1>{{ article.title }}</h1> -->
+    <h1 class="text-4xl font-semibold">{{ article.title }}</h1>
+
     <nuxt-content :document="article" class="prose" />
     <div class="prev-next flex items-center justify-between my-10">
-      <div v-if="prev">
+      <div>
         <Btn 
           :slug="prev.slug"
-          icon-direction="right"
+          v-if="prev"
+          left
         >
         <template v-slot:title>
           Previous
@@ -20,10 +22,10 @@
       </div>
 
       <!-- Next Btn -->
-      <div v-if="next">
+      <div>
         <Btn 
           :slug="next.slug"
-          icon-direction="left"
+          v-if="next"
         >
           <template v-slot:title>
             Next

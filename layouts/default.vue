@@ -2,6 +2,7 @@
   <div>
     <Navbar/>
     <div class="h-20"></div>
+    <Newsletter/>
       <div class="w-3/5 mx-auto mt-20 flex">
       <div class="w-4/5 space-y-20">
         <Nuxt />
@@ -16,6 +17,7 @@
         <Tag name="Django" />
       </div>
     </div>
+    <Footer/>
   </div>
 </template>
 
