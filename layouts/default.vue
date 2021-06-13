@@ -3,11 +3,11 @@
     <Navbar/>
     <div class="h-20"></div>
     <Newsletter/>
-      <div class="w-3/5 mx-auto mt-20 flex">
-      <div class="w-4/5 space-y-20">
+      <div class="w-full px-4 lg:w-3/5 mx-auto mt-20 flex flex-col lg:flex-row">
+      <div class="w-full lg:w-4/5 space-y-20">
         <Nuxt />
       </div>
-      <div class="w-1/5">
+      <div class="w-full lg:w-1/5">
         <h2 class="text-xl mb-2 font-semibold">Tags</h2>
         <Tag name="Python" />
         <Tag name="Javascript" />
@@ -30,5 +30,6 @@
 }
 .nuxt-content-highlight, .nuxt-content-highlight  * {
   font-family: 'DM Mono' !important;
+  font-weight: 500;
 }
 </style>

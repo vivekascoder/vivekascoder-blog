@@ -1,7 +1,7 @@
 <template>
   <NuxtLink 
     class="btn"
-    :to="{name: 'article', params: {slug: slug}}"
+    :to="{name: 'blog-slug', params: {slug: slug}}"
   >
     <span>
       <slot :name="left ? 'icon' : 'title'">

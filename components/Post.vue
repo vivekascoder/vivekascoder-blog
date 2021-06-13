@@ -6,7 +6,7 @@
     <!-- Date Format: 23 April, 2020 -->
     <p class="italic py-2 text-gray-400 text-xl">Posted on {{date}} </p>
     <!-- Some Demo Content -->
-    <p class="mr-40">
+    <p class="mr-4 lg:mr-40">
       {{description}}
     </p>
     <ReadMoreBtn :url="slug" />

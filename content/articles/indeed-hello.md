@@ -1,7 +1,6 @@
 ---
-title: Getting started
-date: '23 December, 2021'
-description: 'Empower your NuxtJS application with @nuxt/content module: write in a content/ directory and fetch your Markdown, JSON, YAML and CSV files through a MongoDB like API, acting as a Git-based Headless CMS.'
+title: "Getting started"
+description: 'Indeed Empower your NuxtJS application with @nuxt/content module: write in a content/ directory and fetch your Markdown, JSON, YAML and CSV files through a MongoDB like API, acting as a Git-based Headless CMS.'
 ---
 
 | Tables   |      Are      |  Cool |
@@ -12,6 +11,10 @@ description: 'Empower your NuxtJS application with @nuxt/content module: write i
 
 ## Content 
 Empower your NuxtJS application with `@nuxtjs/content` module: write in a `content/` directory and fetch your Markdown, JSON, YAML and CSV files through a MongoDB like API, acting as a **Git-based Headless CMS**.
+### Hello World
+```py
+print(":)")
+```
 
 ## Writing content
 ![Kitten](https://placekitten.com/400/200)

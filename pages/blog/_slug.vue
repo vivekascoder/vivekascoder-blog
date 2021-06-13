@@ -1,14 +1,32 @@
 <template>
   <div>
     <h1 class="text-4xl font-semibold">{{ article.title }}</h1>
-
+    <p class="italic py-2 text-gray-400 text-xl mb-6">Posted on {{getPerfectDate(article.createdAt)}} </p>
+    <nav class="table mb-14">
+      <h2 class="text-2xl mb-5 font-semibold">📝 Table of contents</h2>
+      <ul class="table__links">
+        <li class="table__links__link"
+          :class="{ 'py-1': link.depth === 2, 'ml-6 pb-1': link.depth === 3 }"
+          v-for="link of article.toc" 
+          :key="link.id"
+        >
+          <NuxtLink 
+            :to="`#${link.id}`"
+            
+          >
+            {{ link.text }}
+          </NuxtLink>
+        </li>
+      </ul>
+    </nav>
     <nuxt-content :document="article" class="prose" />
     <div class="prev-next flex items-center justify-between my-10">
       <div>
         <Btn 
           :slug="prev.slug"
           v-if="prev"
-          left
+          :title="prev.title"
+          :left="true"
         >
         <template v-slot:title>
           Previous
@@ -25,7 +43,9 @@
       <div>
         <Btn 
           :slug="next.slug"
+          :title="next.title"
           v-if="next"
+          :left="false"
         >
           <template v-slot:title>
             Next
@@ -43,10 +63,20 @@
 
 <script>
 export default {
+  // props: {
+  //   prev: {
+  //     type: Object,
+  //     default: () => null
+  //   },
+  //   next: {
+  //     type: Object,
+  //     default: () => null
+  //   }
+  // },
   async asyncData({$content, params}) {
     console.log('slug ', params)
     const article = await $content('articles', params.slug).fetch()
-    console.log(params.slug);
+    console.log(article);
     const [prev, next] = await $content('articles')
       .only(['title', 'slug'])
       .sortBy('createdAt', 'asc')
@@ -58,10 +88,33 @@ export default {
       prev,
       next
     }
+  },
+  methods: {
+    getPerfectDate(dateString) {
+      const date = new Date(dateString)
+      const monthNames = ["January", "February", "March", "April", "May", "June",
+          "July", "August", "September", "October", "November", "December"
+        ];
+      let month = monthNames[date.getUTCMonth()]
+      let year = date.getUTCFullYear()
+      let day = date.getUTCDay()
+      return `${day} ${month}, ${year}`
+    }
   }
 }
 </script>
 
-<style>
-
+<style lang="postcss">
+/* .table {
+  @apply ;
+} */
+.table__links {
+  @apply text-xl text-green-600 list-disc ml-10;
+}
+.table__links__link {
+  @apply cursor-pointer;
+  &:hover {
+    @apply underline;
+  }
+}
 </style>

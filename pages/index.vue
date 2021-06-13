@@ -4,7 +4,7 @@
         v-for="article in articles"
         :key="article.slug"
         :title="article.title"
-        :date="article.date"
+        :date="getPerfectDate(article.createdAt)"
         :description="article.description"
         :slug="article.slug"
       />
@@ -18,6 +18,18 @@ export default {
     console.log(articles);
     return {
       articles
+    }
+  },
+  methods: {
+    getPerfectDate(dateString) {
+      const date = new Date(dateString)
+      const monthNames = ["January", "February", "March", "April", "May", "June",
+          "July", "August", "September", "October", "November", "December"
+        ];
+      let month = monthNames[date.getUTCMonth()]
+      let year = date.getUTCFullYear()
+      let day = date.getUTCDay()
+      return `${day} ${month}, ${year}`
     }
   }
 }

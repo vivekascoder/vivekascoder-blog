@@ -1,7 +1,7 @@
 <template>
   <NuxtLink 
     class="btn"
-    :to="{name: 'article', params: {slug: url}}"
+    :to="{name: 'blog-slug', params: {slug: url}}"
   >
     <span>Read More</span>
     <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
