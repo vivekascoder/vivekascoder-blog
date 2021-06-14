@@ -31,7 +31,7 @@
     <!-- Tags. For suggesting similar posts. -->
     <h2 class="text-2xl mt-10">Related Topics</h2>
     <div class="mb-10">
-      <Tag v-for="tag in article.tags" :key="tag" :name="tag" />
+      <Tag v-for="tag in tags" :key="tag.slug" :tag="tag" />
     </div>
 
     <!-- Next and Previous Buttons. -->
@@ -91,10 +91,15 @@
 <script>
 export default {
   async asyncData({ $content, params }) {
-    console.log("slug ", params);
     const article = await $content("articles", params.slug).fetch();
-    const tags = await $content("tags").fetch();
-    console.log(article);
+    const tagsList = await $content("tags")
+      .only(['name', 'slug'])
+      .where({name: {$containsAny: article.tags}})
+      .fetch()
+    
+    const tags = Object.assign({}, ...tagsList.map((s) => ({[s.name]: s})))
+    console.log(tags);
+    
     const [prev, next] = await $content("articles")
       .only(["title", "slug"])
       .sortBy("createdAt", "asc")

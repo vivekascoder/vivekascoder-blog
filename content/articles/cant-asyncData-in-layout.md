@@ -1,6 +1,9 @@
 ---
 title: "Can't use async data in Layout/Components"
 description: 'Have you faced this issue in NuxtJs where you are not able to fetch the data which you noramally do using the asyncData method in components and layout. In this article i will tell you how to do that.'
+tags:
+  - VueJs
+  - Javascript
 ---
 
 # 

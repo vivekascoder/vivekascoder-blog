@@ -21,5 +21,26 @@ export const actions = {
     const tags = await this.$content('tags').fetch()
     console.log('Executing fetchTodos.')
     context.commit('setTodos', tags)
+  },
+  getPerfectDate(dateString) {
+    const date = new Date(dateString);
+    const monthNames = [
+      "January",
+      "February",
+      "March",
+      "April",
+      "May",
+      "June",
+      "July",
+      "August",
+      "September",
+      "October",
+      "November",
+      "December"
+    ];
+    let month = monthNames[date.getUTCMonth()];
+    let year = date.getUTCFullYear();
+    let day = date.getUTCDay();
+    return `${day} ${month}, ${year}`;
   }
 }

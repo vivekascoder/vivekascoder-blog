@@ -1,14 +1,17 @@
 <template>
-  <span>
-    {{name}}
-  </span>
+  <NuxtLink
+    :to="`/blog/tag/${tag.slug}`"
+    class="tag"
+  >
+    {{tag.name}}
+  </NuxtLink>
 </template>
 
 <script>
 export default {
   props: {
-    name: {
-      type: String,
+    tag: {
+      type: Object,
       required: true
     }
   }
@@ -16,7 +19,7 @@ export default {
 </script>
 
 <style lang="postcss" scoped>
-span {
+.tag {
   @apply px-3 py-1 text-sm text-gray-700 inline-block;
   @apply border-2 border-gray-700 rounded-sm;
   @apply transition duration-100 ease-in-out;

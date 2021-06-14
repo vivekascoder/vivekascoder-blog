@@ -4,7 +4,7 @@
     <Tag 
       v-for="tag in tags"
       :key="tag.slug"
-      :name="tag.name" 
+      :tag="tag" 
       :title="tag.description"
     />
   </div>
