@@ -31,7 +31,7 @@ export default {
     // Fetch articles.
     const articles = await $content("articles")
       .where({ tags: { $contains: tag.name } })
-      .sortBy("createdAt", "asc")
+      .sortBy("createdAt", "desc")
       .fetch();
 
     return {

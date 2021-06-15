@@ -2,6 +2,10 @@
 
 ## 📝 TODO 
 - [ ] Use VueX to solve the dateformater function.
+### Bux Fixes
+- [ ] Can't use Previous / Next
+- [ ] Font are not cool in mobile when `yarn generated`
+- [ ] Tags page are also not working now :(.
 
 
 ## Scripts

@@ -1,6 +1,13 @@
 <template>
   <footer>
-    <p>Hello World; Made by <strong>@vivekascoder</strong></p>
+    <div class="copyright">
+      <p class="text-center">
+        Copyright 2020; 
+        <strong class="text-green-600">
+          <a href="https://twitter.com/vivekascoder">@vivekascoder</a>
+        </strong>
+      </p>
+    </div>
   </footer>
 </template>
 

@@ -33,8 +33,17 @@ export default {
   buildModules: [
     // https://go.nuxtjs.dev/tailwindcss
     '@nuxtjs/tailwindcss',
+    '@nuxtjs/google-fonts',
   ],
-
+  googleFonts: {
+    families: {
+      'DM Mono': [500],
+      Ubuntu: {
+        wght: [300, 400, 500, 700],
+        ital: [400]
+      },
+    }
+  },
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
     // https://go.nuxtjs.dev/axios
