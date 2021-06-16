@@ -38,10 +38,13 @@ export default {
   googleFonts: {
     families: {
       'DM Mono': [500],
-      Ubuntu: {
+      Inconsolata: {
         wght: [300, 400, 500, 700],
-        ital: [400]
+        // ital: [400]
       },
+      'Josefin Sans': {
+        wght: [400, 500, 600]
+      }
     }
   },
   // Modules: https://go.nuxtjs.dev/config-modules

@@ -30,8 +30,13 @@ tags:
 - Can be done using pipes as well.
 
 ### How to do it.
-1. `ls $(cat filename.txt)`
-2. `cat filename.txt | ls`
+```bash
+ls $(cat filename.txt)
+```
+
+```bash
+cat filename.txt | ls
+```
 
 ## Performing more than one command.
 1. `cmd1 && cmd2`
