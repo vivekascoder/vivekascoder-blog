@@ -46,4 +46,8 @@ p > code {
 .prose img {
   @apply shadow-md;
 }
+.prose iframe {
+  width: 100%;
+  height: 300px;
+}
 </style>

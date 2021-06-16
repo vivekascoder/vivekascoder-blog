@@ -32,3 +32,13 @@
 ## Annoying Facts:
 - You can't use `asyncData` in components.
 ![AsyncData in Components](https://i.imgur.com/R2duxuT.png)
+
+## Some blog design inspirations
+- https://iread.ga
+![Iread](https://i.imgur.com/gKmsypY.png)
+![Iread 2](https://i.imgur.com/xeJycAt.png)
+![Iread contact form](https://i.imgur.com/MzbEKOf.png)
+![Iread Footer](https://i.imgur.com/uTTyjsa.png)
+
+- https://flaviocopes.com/post/
+![Hompepage](https://i.imgur.com/Ac3bzlQ.png)
