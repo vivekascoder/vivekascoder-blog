@@ -89,17 +89,17 @@ export default {
         {
           id: 1,
           name: 'Home',
-          path: 'index'
+          path: '/'
         },
         {
           id: 2,
-          name: 'Posts',
-          path: 'index'
+          name: 'About',
+          path: '/about'
         },
         {
           id: 3,
           name: 'Contact',
-          path: 'index'
+          path: '/'
         }
       ]
     }

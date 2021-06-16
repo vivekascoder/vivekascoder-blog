@@ -12,6 +12,12 @@ tags:
 The method `asyncData` in not allowed in either components and layout.
 So how can we fetch the data in other components or layout.
 
+<br>
+
+`Hello World`
+
+<br>
+
 ## Solution
 - Using VueX State.
   - We'll create a VueX state and use the `nuxtServerInit` method.

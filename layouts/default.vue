@@ -31,4 +31,19 @@ h1, h2, h3, h4, h5 {
   font-family: 'DM Mono', monospace !important;
   font-weight: 500;
 }
+li > code, 
+h1 > code,
+h2 > code,
+h3 > code,
+h4 > code,
+h5 > code,
+p > code {
+  @apply px-2 py-1 rounded-md bg-gray-200;
+  &::after, &::before {
+    display: none;
+  }
+}
+.prose img {
+  @apply shadow-md;
+}
 </style>
