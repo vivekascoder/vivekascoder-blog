@@ -6,8 +6,6 @@ tags:
   - Javascript
 ---
 
-# 
-
 ## Problem
 The method `asyncData` in not allowed in either components and layout.
 So how can we fetch the data in other components or layout.
