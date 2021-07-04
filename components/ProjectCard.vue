@@ -1,22 +1,25 @@
 <template>
   <div class="card">
     <div class="card__image overflow-hidden">
-      <img src="/libman.png" class="object-cover h-96 w-full">
+      <img :src="imageUrl" class="object-cover h-96 w-full">
     </div>
     <div class="card__content">
       <div class="card__title">
-        <h1 class="text-4xl mb-3 text-center md:text-left">Awesome Project</h1>
+        <h1 class="text-4xl mb-3 text-center md:text-left">
+          {{title}}
+        </h1>
       </div>
       <div class="card__desc text-center md:text-left mr-0 md:mr-10 lg:mr-20">
+        <p v-if="achievement" class="text-gray-500 mt-2 mb-1 ">
+          ⭐️ {{achievement}}
+        </p>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi
-          veritatis aliquam fugiat quos enim autem nemo eius ullam quia nam a ad
-          minima, soluta aut optio in placeat quo. Mollitia!
+          {{description}}
         </p>
       </div>
       <div class="card__action space-x-4 mt-6">
-        <a href="#!" class="card__btn">Github</a>
-        <a href="#!" class="card__btn">Live Demo</a>
+        <a :href="githubUrl" class="card__btn">Github</a>
+        <a :href="liveUrl" class="card__btn">Live Demo</a>
       </div>
     </div>
   </div>
@@ -33,15 +36,22 @@ export default {
       type: String,
       required: true
     },
-    image: {
+    achievement: {
+      type: String,
+      required: false
+    },
+    imageUrl: {
       type: String,
       required: true
     },
-    github: {
+    githubUrl: {
       type: String,
       required: true
     },
-    
+    liveUrl: {
+      type: String,
+      required: true
+    },
   }
 };
 </script>

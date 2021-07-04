@@ -17,3 +17,20 @@ tags:
   - Bash
 ---
 ```
+
+## Project Template
+
+Here you'll find the list of some of the projects that i did, which are
+not that bad (Maybe) to showcase. 
+
+Template:
+```md
+---
+name: "BlockFund"
+description: "A decentralized platform to raise fund for social causes."
+github: "https://github.com/vivekascoder/blockfund"
+live: "https://blockfund.biz"
+image: "/blockfund.png"
+
+---
+```
