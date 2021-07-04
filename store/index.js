@@ -3,7 +3,8 @@
 export const state = () => ({
   // VueX State
   tags: [],
-  about: {}
+  about: {},
+  darkMode: false,
 })
 
 export const mutations = {
@@ -13,6 +14,9 @@ export const mutations = {
   },
   setAbout(state, about) {
     state.about = about
+  },
+  setDarkMode(state, darkModeValue) {
+    state.darkMode = darkModeValue
   }
 }
 
@@ -49,5 +53,9 @@ export const actions = {
     let year = date.getUTCFullYear();
     let day = date.getUTCDay();
     return `${day} ${month}, ${year}`;
+  },
+  changeTheme({commit}, darkModeValue) {
+    // Responsible for changing the themeMode (dark, light)
+    commit('setDarkMode', darkModeValue)
   }
 }
