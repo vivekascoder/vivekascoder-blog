@@ -1,0 +1,20 @@
+name: Deploy Using SSH.
+on: 
+  push:
+    branches: [ master ]
+
+jobs: 
+  job_deploy:
+    name: Job Deploy
+    runs-on: ubuntu-latest
+    steps:
+    - name: Tesing ssh-connection
+      uses: appleboy/ssh-actions@master
+      host: divcorn.com
+      username: vivekascoder
+      key: ${{ secrets.PRIVATE_KEY }}
+      post: 22
+      script: |
+        cd code/vivekascoder/
+        git pull origin master
+        git status
