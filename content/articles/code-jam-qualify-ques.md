@@ -36,6 +36,60 @@ We have several prizes we can award to the winning team(s) thanks to your sponso
 - I will update the breakdown of the code soon, for now just check the solution.
 
 ```python
-I will post the code after the qualifying period is over
+from typing import Any, List, Optional
+
+def generate_col(col_width: List[int], col_content: List[Any], centered: bool=False):
+  data = '│'
+  direction = '^' if centered else '<' 
+  for i in range(len(col_content)):
+    data += f' {{:{direction}{col_width[i]}}} '.format(str(col_content[i])) + '│'
+  return data
+
+def generate_ending(col_width: List[Any], position:str):
+  """
+  positiong:List['top', 'middle', 'bottom']
+  """ 
+  ascii = {
+    'l': { 'top': '┌', 'middle': '├', 'bottom': '└' },
+    'm': { 'top': '┬', 'middle': '┼', 'bottom': '┴' },
+    'r': { 'top': '┐', 'middle': '┤', 'bottom': '┘' },
+  }
+  data = ascii['l'][position]
+  for i in range(len(col_width)):
+    data += '─'*(col_width[i]+2)
+    if i != len(col_width) - 1:
+      data += ascii['m'][position]
+  data += ascii['r'][position]
+  return data
+
+def calculate_col_width(r, labels=None):
+  rows = r.copy()
+  if labels:
+    rows.insert(0, labels)
+  col_width = [0]*len(rows[0])
+  for i in rows:
+    temp = [len(str(x)) for x in i]
+    for j in range(len(rows[0])):
+      if temp[j] > col_width[j]:
+        col_width[j] = temp[j]
+  
+  return col_width
+
+def make_table(rows: List[List[Any]], labels: Optional[List[Any]] = None, centered: bool = False) -> str:
+  col_width = calculate_col_width(rows, labels=labels) 
+
+  table = ''
+  table += generate_ending(col_width, position='top') + '\n'
+  # Printing the head
+  if labels:
+    table += generate_col(col_width, labels, centered=centered) + '\n'
+    table += generate_ending(col_width, position='middle') + '\n'
+  
+  for i in rows:
+    table += generate_col(col_width, i, centered=centered) + '\n'
+  
+  table += generate_ending(col_width, position='bottom') + '\n'
+  return table
+
 ```
 
