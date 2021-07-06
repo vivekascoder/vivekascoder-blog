@@ -1,5 +1,5 @@
 <template>
-  <div class="space-y-20 mr-10">
+  <div class="space-y-20 md:mr-10">
     <project-card 
       v-for="project in projects"
       :key="project.slug"
@@ -15,6 +15,9 @@
 
 <script>
 export default {
+  mounted() {
+    this.$store.commit('setLinks', 'Projects')
+  },
   async asyncData({ $content }) {
     const projects = await $content('projects')
       .sortBy('createdAt', 'desc')

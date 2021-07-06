@@ -6,10 +6,12 @@
 
 <script>
 export default {
+  mounted() {
+    this.$store.commit('setLinks', 'About')
+  },
   layout: 'aboutlayout',
   async asyncData({$content}) {
     const about = await $content('about/about').fetch()
-    console.log(about);
     return {
       about
     }

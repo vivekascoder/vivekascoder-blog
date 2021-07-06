@@ -68,5 +68,10 @@ export default {
     config: {
         plugins: [require('@tailwindcss/typography')],
     }
-},
+  },
+
+  // For the middlewares.
+  router: {
+    middleware: 'navbarState'
+  }
 }

@@ -13,6 +13,9 @@
 
 <script>
 export default {
+  mounted() {
+    this.$store.commit('setLinks', 'Home')
+  },
   async asyncData({ $content }) {
     const articles = await $content("articles")
       .sortBy("createdAt", "desc")

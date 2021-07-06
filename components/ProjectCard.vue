@@ -1,7 +1,7 @@
 <template>
   <div class="card">
     <div class="card__image overflow-hidden">
-      <img :src="imageUrl" class="object-cover h-96 w-full">
+      <img :src="imageUrl" class="object-cover h-40 md:h-96 w-full">
     </div>
     <div class="card__content">
       <div class="card__title">

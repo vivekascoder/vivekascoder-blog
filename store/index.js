@@ -5,6 +5,32 @@ export const state = () => ({
   tags: [],
   about: {},
   darkMode: false,
+  links: [
+    {
+      id: 1,
+      name: "Home",
+      path: "/",
+      active: false
+    },
+    {
+      id: 2,
+      name: "Projects",
+      path: "/projects",
+      active: false
+    },
+    {
+      id: 3,
+      name: "About",
+      path: "/about",
+      active: false
+    },
+    {
+      id: 4,
+      name: "Contact",
+      path: "/",
+      active: false
+    }
+  ]
 })
 
 export const mutations = {
@@ -17,6 +43,17 @@ export const mutations = {
   },
   setDarkMode(state, darkModeValue) {
     state.darkMode = darkModeValue
+  },
+  setLinks(state, name) {
+    // Find the link with name == `name` 
+    // and change the active to true.
+    state.links.forEach((link) => {
+      if (link.name == name) {
+        link.active = true
+      } else {
+        link.active = false
+      }
+    })
   }
 }
 

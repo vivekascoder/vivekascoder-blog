@@ -6,7 +6,7 @@
       class="nav"
     >
     <!-- Blog's Title -->
-      <div class="nav__title">
+      <nuxt-link class="nav__title" to="/">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           class="h-6 w-6"
@@ -21,8 +21,8 @@
             d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
           />
         </svg>
-        <span class="font-semibold uppercase text-2xl">vivekascoder</span>
-      </div>
+        <span class="font-semibold uppercase text-xl md:text-2xl">vivekascoder</span>
+      </nuxt-link>
       <div class="nav__links">
         <div
           class="nav__links__wrapper"
@@ -32,6 +32,7 @@
             :key="link.id"
             :to="link.path"
             class="nav__link"
+            :class="{'active': link.active}"
           >
           {{link.name}}
           </nuxt-link>
@@ -132,10 +133,13 @@ export default {
   @apply flex space-x-4 items-center h-full;
 }
 .nav__links__wrapper {
-  @apply flex md:space-x-4 md:items-center z-40 hidden md:flex;
+  @apply hidden md:space-x-4 md:items-center z-40 md:flex;
 }
 .nav__link {
   @apply my-1 px-4 py-4 text-center md:text-left md:py-1 hover:bg-gray-800 hover:text-white cursor-pointer md:rounded-full transition duration-100 ease-in-out block;
+}
+.active {
+  @apply bg-gray-800 text-white;
 }
 .btn__yt {
   @apply flex bg-red-500 items-center text-white px-6 py-2 rounded-full space-x-2 hover:bg-red-600 transition duration-100 ease-in-out;
