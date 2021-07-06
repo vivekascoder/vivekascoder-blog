@@ -8,7 +8,7 @@ jobs:
     name: Job Deploy
     runs-on: ubuntu-latest
     steps:
-    - name: Tesing ssh-connection
+    - name: Build and Deploy the Project.
       uses: appleboy/ssh-action@master
       with:
         host: divcorn.com
@@ -18,4 +18,4 @@ jobs:
         script: |
           cd code/vivekascoder/
           git pull origin master
-          yarn dev
+          yarn build
