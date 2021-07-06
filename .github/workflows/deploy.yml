@@ -8,8 +8,9 @@ jobs:
     name: Job Deploy
     runs-on: ubuntu-latest
     steps:
-      - name: Tesing ssh-connection
-        uses: appleboy/ssh-actions@master
+    - name: Tesing ssh-connection
+      uses: appleboy/ssh-action@master
+      with:
         host: divcorn.com
         username: vivekascoder
         key: ${{ secrets.PRIVATE_KEY }}
