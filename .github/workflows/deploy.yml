@@ -18,4 +18,4 @@ jobs:
         script: |
           cd code/vivekascoder/
           git pull origin master
-          git status
+          pwd
