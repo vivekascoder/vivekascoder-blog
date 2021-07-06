@@ -28,7 +28,7 @@
           class="nav__links__wrapper"
         >
           <nuxt-link
-            v-for="link in links"
+            v-for="link in $store.state.links"
             :key="link.id"
             :to="link.path"
             class="nav__link"
@@ -92,7 +92,7 @@
       :class="{'hidden': !showMenu}"
     >
       <nuxt-link
-        v-for="link in links"
+        v-for="link in $store.state.links"
         :key="link.id"
         :to="link.path"
         class="nav__mobile__link"
@@ -104,12 +104,10 @@
 </template>
 
 <script>
-import {links} from '../project-config.json'
 export default {
   data() {
     return {
       showMenu: false,
-      links: links
     };
   },
   methods: {

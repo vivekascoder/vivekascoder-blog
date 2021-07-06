@@ -17,13 +17,13 @@
 
 
 ## 📝 TODO 
-- [ ] Use VueX to solve the dateformater function.
-- [ ] Move to Josefin Sans and Inconsolata as primary fonts.
+- [x] Use VueX to solve the dateformater function.
+- [x] Move to Josefin Sans and Inconsolata as primary fonts.
 - [ ] Cover images for our blog.
 ### Bux Fixes
-- [ ] Can't use Previous / Next
-- [ ] Font are not cool in mobile when `yarn generated`
-- [ ] Tags page are also not working now :(.
+- [x] Can't use Previous / Next
+- [x] Font are not cool in mobile when `yarn generated`
+- [x] Tags page are also not working now :(.
 
 
 ## Scripts
