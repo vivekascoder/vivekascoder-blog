@@ -34,6 +34,7 @@ sudo systemctl status postgresql
 
 ## Setting Up remote PostgreSQL Database.
 - Open the `pg_hba.conf` file using the following command.
+
 ```bash
 vim /etc/postgresql/12/main/pg_hba.conf
 ```
@@ -44,7 +45,9 @@ host    all             all              ::/0                            md5
 ```
 ![SSH](/remote-db/5.png)
 
-- `vim /etc/postgresql/12/main/postgresql.conf`
+```bash
+vim /etc/postgresql/12/main/postgresql.conf
+```
 - Change the `listen_address` to *
 ```
 listen_addresses = '*'

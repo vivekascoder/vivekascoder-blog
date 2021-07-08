@@ -30,6 +30,7 @@ h1, h2, h3, h4, h5 {
 .nuxt-content-highlight * {
   font-family: 'DM Mono', monospace !important;
   font-weight: 500;
+  @apply text-xs;
 }
 li > code, 
 h1 > code,
