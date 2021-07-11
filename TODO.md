@@ -3,6 +3,7 @@
 
 ## Urgent
 - [x] Add Github Action for CI/CD.
+- [ ] Add SEO meta tags for link preview (https://ogp.me/)
 - [ ] Make Newsletter working with either superbase / firebase.
 - [ ] Fix the Tags (Give spacing above it in the mobile size.) 
 - [ ] Make a page to showcase the youtube videos.
