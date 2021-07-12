@@ -28,23 +28,20 @@ def generate_tag(name: str, description: str) -> bool:
     tag_path.write(tag)
   return True
 
-def generate_project(name: str, description: str, repo_name: str) -> bool:
+def generate_project(
+    name: str, description: str, repo_name: str, 
+    live_url: str, image_path: str
+  ) -> bool:
   project_path = os.path.join(PROJECT_PATH, f"{name.lower()}.md")
   if os.path.isfile(project_path):
     return False
   project = f"---\n"
   project += f"name: '{name}'\n"
   project += f"description: \"{description}\"\n"
-  project += f"github: \"https://github.com/vivekascoder/{repo_name}\""
+  project += f"github: \"https://github.com/vivekascoder/{repo_name}\"\n"
+  project += f"live: \"{live_url}\"\n"
+  project += f"image: \"{image_path}\"\n"
   project += f"---\n"
-  # ---
-  # name: "BlockFund"
-  # description: "A decentralized platform to raise fund for social causes."
-  # github: "https://github.com/vivekascoder/blockfund"
-  # live: "https://blockfund.biz"
-  # image: "/blockfund.png"
-
-  # ---
 
   with open(project_path, 'w') as project_path:
     project_path.write(project)
@@ -59,6 +56,18 @@ def main():
       print("[TAG] Generated !")
     else:
       print("[TAG] Already Exists.")
+  elif type == 'project':
+    name = input("[PROJECt] Enter name: ")
+    description = input("[PROJECt] Enter description: ")
+    repo_name = input("[PROJECt] Enter Repo Name: ")
+    live_url = input("[PROJECt] Enter Live Url: ")
+    image_path = input("[PROJECt] Enter Image Path: ")
+    if generate_project(name, description, repo_name, live_url, image_path):
+      print("[PROJECT] Created!")
+    else:
+      print("[PROJET] Already Exists.")
+
+    
 
 if __name__ == '__main__':
   main()

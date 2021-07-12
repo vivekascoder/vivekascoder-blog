@@ -10,7 +10,7 @@
         </h1>
       </div>
       <div class="card__desc text-center md:text-left mr-0 md:mr-10 lg:mr-20">
-        <p v-if="achievement" class="text-gray-500 mt-2 mb-1 ">
+        <p v-if="achievement" class="text-gray-500 text-sm mt-2 mb-1 ">
           ⭐️ {{achievement}}
         </p>
         <p>
@@ -57,6 +57,13 @@ export default {
 </script>
 
 <style lang="postcss">
+.card:hover {
+  @apply transform -translate-y-2;
+  /* Transition */
+  @apply transition-all duration-150 ease-in-out;
+  /* Change the cursor */
+  @apply cursor-pointer;
+}
 .card {
   @apply rounded-md shadow-md overflow-hidden;
 }
