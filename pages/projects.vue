@@ -1,5 +1,5 @@
 <template>
-  <div class="space-y-20 md:mr-10">
+  <div class="md:mr-10 grid lg:grid-cols-2 grid-cols-1 gap-4">
     <project-card 
       v-for="project in projects"
       :key="project.slug"
@@ -15,6 +15,7 @@
 
 <script>
 export default {
+  layout: 'ProjectLayout',
   mounted() {
     this.$store.commit('setLinks', 'Projects')
   },
