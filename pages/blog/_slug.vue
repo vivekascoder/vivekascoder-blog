@@ -13,7 +13,7 @@
           class="table__links__link"
           :class="{
             'py-1': link.depth === 2,
-            'ml-6 pb-1': link.depth === 3
+            'ml-6 pb-1': link.depth === 3,
           }"
           v-for="link of article.toc"
           :key="link.id"
@@ -38,9 +38,7 @@
     <div class="prev-next flex items-center justify-between my-10">
       <div>
         <Btn :slug="prev.slug" v-if="prev" :title="prev.title" :left="true">
-          <template v-slot:title>
-            Previous
-          </template>
+          <template v-slot:title> Previous </template>
           <template v-slot:icon>
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -63,9 +61,7 @@
       <!-- Next Btn -->
       <div>
         <Btn :slug="next.slug" :title="next.title" v-if="next" :left="false">
-          <template v-slot:title>
-            Next
-          </template>
+          <template v-slot:title> Next </template>
           <template v-slot:icon>
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -90,16 +86,28 @@
 
 <script>
 export default {
+  head() {
+    return {
+      title: this.article.title,
+      meta: [
+        {
+          hid: "description",
+          name: "description",
+          content: this.article.description,
+        },
+      ],
+    };
+  },
   async asyncData({ $content, params }) {
     const article = await $content("articles", params.slug).fetch();
     const tagsList = await $content("tags")
-      .only(['name', 'slug'])
-      .where({name: {$containsAny: article.tags}})
-      .fetch()
-    
-    const tags = Object.assign({}, ...tagsList.map((s) => ({[s.name]: s})))
+      .only(["name", "slug"])
+      .where({ name: { $containsAny: article.tags } })
+      .fetch();
+
+    const tags = Object.assign({}, ...tagsList.map((s) => ({ [s.name]: s })));
     console.log(tags);
-    
+
     const [prev, next] = await $content("articles")
       .only(["title", "slug"])
       .sortBy("createdAt", "desc")
@@ -110,7 +118,7 @@ export default {
       article,
       prev,
       next,
-      tags
+      tags,
     };
   },
   methods: {
@@ -128,14 +136,14 @@ export default {
         "September",
         "October",
         "November",
-        "December"
+        "December",
       ];
       let month = monthNames[date.getUTCMonth()];
       let year = date.getUTCFullYear();
       let day = date.getUTCDay();
       return `${day} ${month}, ${year}`;
-    }
-  }
+    },
+  },
 };
 </script>
 
