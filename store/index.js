@@ -27,7 +27,7 @@ export const state = () => ({
     {
       id: 4,
       name: "Contact",
-      path: "/",
+      path: "/contact",
       active: false
     }
   ]
