@@ -44,6 +44,20 @@ p > code {
     display: none;
   }
 }
+.prose blockquote {
+  @apply bg-green-200;
+  @apply border-l-4 border-green-700;
+}
+.prose blockquote > p {
+  @apply not-italic py-8;
+  @apply bg-green-200 text-green-800;
+  &::after, &::before {
+    @apply hidden;
+  }
+}
+.prose blockquote > p > code {
+  @apply bg-green-300 text-green-900;
+}
 .prose img {
   @apply shadow-md;
 }
