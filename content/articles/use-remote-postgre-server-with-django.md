@@ -1,6 +1,7 @@
 ---
 title: "Create and Use an Remote Databse with Django."
 description: "In this article we'll do some server stuff, I'll show you how you create a remote postgresql instance on a virtual machine and connect with your django project."
+author: "vivekascoder"
 tags: 
   - Bash
   - Linux

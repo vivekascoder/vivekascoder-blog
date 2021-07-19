@@ -1,6 +1,7 @@
 ---
 title: "Backtick Issue with NuxtJS Content Module"
 description: "In this article, I've adressed a small issue that you might face while using the nuxtjs content module, which can be annoying, This article explains how to style the inline code tag."
+author: "vivekascoder"
 tags: 
   - VueJs
   - CSS

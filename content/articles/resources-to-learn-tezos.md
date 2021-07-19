@@ -1,6 +1,7 @@
 ---
 title: "Resources to learn Tezos."
 description: "In this short article you'll found the collection of resources which is being shared by the community of Tezos, SmartPy, Taquito."
+author: "vivekascoder"
 tags: 
   - Tezos
   - SmartPy

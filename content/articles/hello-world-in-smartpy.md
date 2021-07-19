@@ -1,6 +1,7 @@
 ---
 title: "Hello World in SmartPy."
 description: "In this article we'll see how can you guys write a super simple program in smartpy, which is a lanuage used to make smart contracts."
+author: "vivekascoder"
 tags: 
   - SmartPy
   - Tezos

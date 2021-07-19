@@ -1,6 +1,10 @@
 <template>
   <div class="">
     <h1 class="text-4xl font-semibold">{{ article.title }}</h1>
+    <author-info 
+      :author="author"
+      v-if="author"
+    />
     <p class="italic py-2 text-gray-400 text-xl mb-6">
       Posted on {{ getPerfectDate(article.createdAt) }}
     </p>
@@ -114,11 +118,16 @@ export default {
       .surround(params.slug)
       .fetch();
 
+    // Fething author's info.
+    const author = await $content('authors', article.author).fetch()
+    console.log('author', author)
+
     return {
       article,
       prev,
       next,
       tags,
+      author
     };
   },
   methods: {

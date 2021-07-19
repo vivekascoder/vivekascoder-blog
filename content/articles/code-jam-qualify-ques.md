@@ -1,6 +1,7 @@
 ---
 title: "Python CodeJam Qualifying Question."
 description: "Python community organizes the CodeJam twice a year in order to participate you need to solve a question first, this is the question the asked in the month of June in 2021."
+author: "vivekascoder"
 tags: 
   - Python
 ---

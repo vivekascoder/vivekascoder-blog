@@ -2,6 +2,21 @@ export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
 
+  // Hooks
+  hooks: {
+    'content:file:beforeInsert': (document) => {
+      if (document.extension === '.md') {
+        Object.entries(document).forEach(([key, value]) => {
+          const _key = `case_insensitive__${key}`; // prefix is arbitrary
+
+          if (!document[_key] && typeof value === 'string') {
+            document[_key] = value.toLocaleLowerCase();
+          }
+        });
+      }
+    }
+  },
+
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title: 'Vivek\'s Blog',
@@ -11,10 +26,10 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { 
-        hid: 'description', 
-        name: 'description', 
-        content: 'My personal blog, learn about cool Fullstack & DevOps Things.' 
+      {
+        hid: 'description',
+        name: 'description',
+        content: 'My personal blog, learn about cool Fullstack & DevOps Things.'
       }
     ],
     link: [
@@ -70,7 +85,7 @@ export default {
   },
   tailwindcss: {
     config: {
-        plugins: [require('@tailwindcss/typography')],
+      plugins: [require('@tailwindcss/typography')],
     }
   },
 

@@ -1,6 +1,7 @@
 ---
 title: "Setting up Code Server with Nginx reverse proxy."
 description: "This article will demostrate how you can use/set code-server with nginx reverse proxy and sertificates, so that you can access is with https://code.example.com"
+author: "vivekascoder"
 tags: 
   - Bash
   - Linux

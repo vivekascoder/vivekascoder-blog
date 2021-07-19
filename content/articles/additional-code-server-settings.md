@@ -1,6 +1,7 @@
 ---
 title: "Additional Code Server Settings."
 description: "This article is a continuation of a video that i posted on my channel about setting up code server in a virtual machine. Code-server is like Vscode but in cloud, which is really interesting if you have a low end computer."
+author: "vivekascoder"
 tags: 
   - Linux
 ---
