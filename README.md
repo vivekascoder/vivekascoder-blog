@@ -42,3 +42,14 @@
 
 - https://flaviocopes.com/post/
 ![Hompepage](https://i.imgur.com/Ac3bzlQ.png)
+
+- Shors Algorithm
+- Qiskit Docs
+- IBM Quantum Computing
+- Quantum Walk Algothim
+- QCHack
+- Game of life.
+- CirQ
+- AWS Braket
+- Trapped Ios Quantum Computing
+- qiskit.org/textbook/ch-states/atom

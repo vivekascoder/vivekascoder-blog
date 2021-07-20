@@ -2,6 +2,15 @@ export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
 
+  // PWA Config
+  pwa: {
+    manifest: {
+      name: 'Blog',
+      lang: 'en',
+      useWebmanifestExtension: false
+    }
+  },
+
   // Hooks
   hooks: {
     'content:file:beforeInsert': (document) => {
@@ -53,6 +62,7 @@ export default {
     // https://go.nuxtjs.dev/tailwindcss
     '@nuxtjs/tailwindcss',
     '@nuxtjs/google-fonts',
+    '@nuxtjs/pwa'
   ],
   googleFonts: {
     families: {
