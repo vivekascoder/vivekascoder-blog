@@ -53,3 +53,6 @@
 - AWS Braket
 - Trapped Ios Quantum Computing
 - qiskit.org/textbook/ch-states/atom
+
+## Notifier
+- Uses Gotify to send notification
