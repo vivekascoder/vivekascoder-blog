@@ -19,7 +19,10 @@
 * {
   /* font-family: 'Ubuntu', sans-serif; */
   font-family: 'Inconsolata', monospace;
+  /* Remove the blue highlighting in mobile devices. */
+  -webkit-tap-highlight-color: transparent;
 }
+
 h1, h2, h3, h4, h5 {
   font-family: 'Josefin Sans', sans-serif;
 }

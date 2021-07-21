@@ -6,6 +6,7 @@ export default {
   pwa: {
     manifest: {
       name: 'Blog',
+      description: "A blog on full stack Web Dev and DevOps.",
       lang: 'en',
       useWebmanifestExtension: false
     }

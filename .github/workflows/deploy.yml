@@ -19,3 +19,4 @@ jobs:
           cd code/vivekascoder/
           git pull origin master
           yarn generate
+          send_notification
