@@ -56,3 +56,4 @@
 
 ## Notifier
 - Uses Gotify to send notification
+- https://gotify.divcorn.com
