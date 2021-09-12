@@ -121,7 +121,7 @@ export default {
 
 <style lang="postcss" scoped>
 .nav-wrapper {
-  @apply border-b-2 border-gray-200 shadow-sm fixed bg-white top-0 left-0 right-0 h-16 z-50;
+  @apply border-b-2 border-gray-200 shadow-sm fixed bg-white bg-opacity-95 top-0 left-0 right-0 h-16 z-50;
 }
 .nav {
   @apply flex items-center justify-between container mx-auto relative h-full px-4;

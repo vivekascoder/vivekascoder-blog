@@ -1,16 +1,17 @@
 <template>
-  <div class="">
-    <h1 class="text-4xl font-semibold">{{ article.title }}</h1>
+  <div class="bg-white p-4 rounded-sm">
+    <h1 class="text-3xl font-semibold">{{ article.title }}</h1>
     <author-info 
       :author="author"
       v-if="author"
+      :time="getPerfectDate(article.createdAt)"
     />
-    <p class="italic py-2 text-gray-400 text-xl mb-6">
+    <!-- <p class="italic py-2 text-gray-400 text-xl mb-6">
       Posted on {{ getPerfectDate(article.createdAt) }}
-    </p>
+    </p> -->
 
     <!-- Table of contents -->
-    <nav class="table mb-14">
+    <nav class="table mb-14 mt-6">
       <h2 class="text-2xl mb-5 font-semibold">📝 Table of contents</h2>
       <ul class="table__links">
         <li
@@ -89,6 +90,7 @@
 </template>
 
 <script>
+import '../../assets/css/dracula-prism.min.css'
 export default {
   head() {
     return {
@@ -130,6 +132,7 @@ export default {
       author
     };
   },
+  mounted() {console.log(this.article)},
   methods: {
     getPerfectDate(dateString) {
       const date = new Date(dateString);
