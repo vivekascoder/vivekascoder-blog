@@ -6,7 +6,7 @@
       <label class="text-gray-600 text-lg">{{label}}:</label>
     </div>
     <div>
-      <input
+      <!-- <input
         v-bind="$attrs"
         class="
           w-full
@@ -18,6 +18,15 @@
           duration-150
           ease-in-out
           rounded-sm
+        "
+        :value="value"
+        @input="$emit('update:value', $event.target.value)"
+      /> -->
+      <input
+        v-bind="$attrs"
+        class="
+        form-input
+        w-full
         "
         :value="value"
         @input="$emit('update:value', $event.target.value)"

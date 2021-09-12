@@ -30,9 +30,10 @@ props: {
 <style lang="postcss" scoped>
 .btn {
   @apply inline-flex space-x-2 px-6 py-2 border-2 border-gray-700 mt-10 transition duration-200 ease-in-out;
+  @apply uppercase;
 }
 .btn:hover {
-  filter: drop-shadow(2px 3px 10px rgba(0,0,0,0.3));
+  /* filter: drop-shadow(2px 3px 10px rgba(0,0,0,0.3)); */
   @apply bg-gray-700 text-white;
 }
 </style>

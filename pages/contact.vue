@@ -1,7 +1,9 @@
 <template>
-  <div class="p-6 bg-gray-300 rounded-sm">
-    <form @submit.prevent="handleContactForm">
-      <h1 class="text-4xl mb-8">Contact Me</h1>
+  <div class=" rounded-sm shadow-md max-w-lg mx-auto overflow-hidden">
+    <div class=" bg-green-600 text-white p-4" aria-label="Header for the form.">
+      <h1 class="text-2xl font-bold text-center uppercase">Contact Me</h1>
+    </div>
+    <form @submit.prevent="handleContactForm" class="p-6">
       
       <input-text
         placeholder="John Doe"
@@ -44,6 +46,9 @@ export default {
   components: {
     InputText,
     Textarea
+  },
+  mounted() {
+    this.$store.commit('setLinks', 'Contact');
   },
   data() {
     return {

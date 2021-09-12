@@ -6,7 +6,7 @@
       <label class="text-gray-600 text-lg">{{label}}:</label>
     </div>
     <div>
-      <textarea
+      <!-- <textarea
         v-bind="$attrs"
         class="
           w-full
@@ -19,6 +19,17 @@
           ease-in-out
           rounded-sm
           h-40
+        "
+        type="text"
+        :value="value"
+        @input="$emit('update:value', $event.target.value)"
+      >
+      </textarea> -->
+      <textarea
+        v-bind="$attrs"
+        class="
+          form-textarea
+          w-full
         "
         type="text"
         :value="value"

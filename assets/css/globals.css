@@ -1,0 +1,74 @@
+/* Global styles for the documents. */
+
+* {
+  font-family: 'Inter', sans-serif;
+  /* font-family: 'Noto Sans', sans-serif; */
+  /* font-family: 'Inconsolata', monospace; */
+  /* Remove the blue highlighting in mobile devices. */
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  background: #DAE0E6;
+}
+
+/* h1, h2, h3, h4, h5 {
+  font-family: 'IBM Plex Sans', sans-serif;
+} */
+*::selection {
+  @apply bg-gray-800 text-foreground;
+}
+
+/* Styles for the scrollbar */
+/* ::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-track {
+  @apply bg-gray-100;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-green-500;
+  &:hover {
+    @apply bg-green-600;
+  }
+} */
+
+.nuxt-content-highlight,
+.nuxt-content-highlight * {
+  font-family: 'DM Mono', monospace !important;
+  font-weight: 500;
+  @apply text-xs;
+}
+li > code, 
+h1 > code,
+h2 > code,
+h3 > code,
+h4 > code,
+h5 > code,
+p > code {
+  @apply px-2 py-1 rounded-md bg-gray-200;
+  &::after, &::before {
+    display: none;
+  }
+}
+.prose blockquote {
+  @apply bg-green-200;
+  @apply border-l-4 border-green-700;
+}
+.prose blockquote > p {
+  @apply not-italic py-8;
+  @apply bg-green-200 text-green-800;
+  &::after, &::before {
+    @apply hidden;
+  }
+}
+.prose blockquote > p > code {
+  @apply bg-green-300 text-green-900;
+}
+.prose img {
+  @apply shadow-md;
+}
+.prose iframe {
+  width: 100%;
+  height: 300px;
+}

@@ -4,7 +4,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        background: "#282a36",
+        background: "#DAE0E6",
         background_alt: "#44475a",
         foreground: "#f8f8f2",
         comment: "#6272a4",
@@ -22,6 +22,6 @@ module.exports = {
     extend: {},
   },
   plugins: [
-    require("@tailwindcss/typography")
+    require("@tailwindcss/typography"),
   ],
 }

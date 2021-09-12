@@ -24,16 +24,6 @@
 </template>
 
 <style lang="postcss">
-* {
-  /* font-family: 'Ubuntu', sans-serif; */
-  font-family: 'Inconsolata', monospace;
-}
-h1, h2, h3, h4, h5 {
-  font-family: 'Josefin Sans', sans-serif;
-}
-*::selection {
-  @apply bg-gray-800 text-foreground;
-}
 .nuxt-content-highlight,
 .nuxt-content-highlight * {
   font-family: 'DM Mono', monospace !important;

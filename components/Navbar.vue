@@ -21,7 +21,7 @@
             d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
           />
         </svg>
-        <span class="font-semibold uppercase text-xl md:text-2xl">vivekascoder</span>
+        <span class="font-semibold uppercase text-lg md:text-lg">vivekascoder</span>
       </nuxt-link>
       <div class="nav__links">
         <div
@@ -40,12 +40,12 @@
 
         <!-- Youtube Btn -->
         <a
-          href="https://www.youtube.com/channel/UC1uPwKU2VB9d1COLsyT4_GA"
+          href="https://www.youtube.com/channel/vivekascoder"
           class="btn__yt"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            class="h-6 w-6"
+            class="h-4 w-4"
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"
@@ -136,13 +136,13 @@ export default {
   @apply hidden md:space-x-4 md:items-center z-40 md:flex;
 }
 .nav__link {
-  @apply my-1 px-4 py-4 text-center md:text-left md:py-1 hover:bg-gray-800 hover:text-white cursor-pointer md:rounded-full transition duration-100 ease-in-out block;
+  @apply my-1 px-4 py-4 text-center md:text-left md:py-1 hover:bg-gray-800 hover:text-white cursor-pointer md:rounded-full transition duration-100 ease-in-out block text-sm font-semibold;
 }
 .active {
   @apply bg-gray-800 text-white;
 }
 .btn__yt {
-  @apply flex bg-red-500 items-center text-white px-6 py-2 rounded-full space-x-2 hover:bg-red-600 transition duration-100 ease-in-out;
+  @apply flex bg-red-500 items-center text-white px-4 py-2 rounded-full space-x-2 hover:bg-red-600 transition duration-100 ease-in-out;
 }
 .btn__yt__title {
   @apply font-semibold uppercase text-xs tracking-wider;

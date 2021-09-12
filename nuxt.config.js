@@ -47,12 +47,16 @@ export default {
     ]
   },
 
-  // Global CSS: https://go.nuxtjs.dev/config-css
+  /**
+   * Global Styles for the pages.
+   */
   css: [
+    '@/assets/css/globals.css'
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
+    '~/plugins/vue-heroicons.js'
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -67,13 +71,20 @@ export default {
   ],
   googleFonts: {
     families: {
-      'DM Mono': [500],
-      Inconsolata: {
-        wght: [300, 400, 500, 700],
-        // ital: [400]
-      },
-      'Josefin Sans': {
-        wght: [400, 500, 600]
+      // 'DM Mono': [500],
+
+      // // The following font is for normal text.
+      // 'Noto Sans': {
+      //   wght: [300, 400, 500, 600, 700],
+      //   // ital: [400]
+      // },
+
+      // // The following font is for headings and titles.
+      // 'IBM Plex Sans': {
+      //   wght: [400, 500, 600]
+      // }
+      'Inter': {
+        wght: [300, 400, 500, 600, 700]
       }
     }
   },
@@ -93,6 +104,7 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
+    transpile: '@heroicons/vue'
   },
   tailwindcss: {
     config: {

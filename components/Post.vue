@@ -1,12 +1,12 @@
  <template>
-  <div class="">
-    <h1 class="text-3xl font-medium">
+  <div class="post-wrapper">
+    <p class="text-gray-400 text-xs">Posted on {{date}} </p>
+    <h1 class="text-2xl font-semibold text-gray-800">
       {{title}}
     </h1>
     <!-- Date Format: 23 April, 2020 -->
-    <p class="italic py-2 text-gray-400 text-xl">Posted on {{date}} </p>
     <!-- Some Demo Content -->
-    <p class="mr-4 lg:mr-40">
+    <p class="text-sm leading-relaxed mt-2 text-gray-700">
       {{description}}
     </p>
     <ReadMoreBtn :url="slug" />
@@ -36,4 +36,8 @@ export default {
 };
 </script>
 
-<style></style>
+<style lang='postcss' scoped>
+.post-wrapper {
+  @apply rounded-sm py-4 px-6 bg-white border-2 border-gray-100 hover:border-gray-200;
+}
+</style>

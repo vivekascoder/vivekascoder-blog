@@ -20,7 +20,7 @@ export default {
 
 <style lang="postcss" scoped>
 .tag {
-  @apply px-3 py-1 text-sm text-gray-700 inline-block;
+  @apply px-3 font-semibold py-1 text-xs text-gray-700 inline-block;
   @apply border-2 border-gray-700 rounded-sm;
   @apply transition duration-100 ease-in-out;
   /* Spacing Goes Now */

@@ -1,5 +1,6 @@
 <template>
-  <div class="space-y-20">
+  <div class="space-y-4">
+    <search-box />
     <Post
       v-for="article in articles"
       :key="article.slug"

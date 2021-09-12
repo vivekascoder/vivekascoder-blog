@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="bg-white p-4 rounded-sm">
     <h2 class="text-xl mb-2 font-semibold">Tags</h2>
     <Tag 
       v-for="tag in tags"
